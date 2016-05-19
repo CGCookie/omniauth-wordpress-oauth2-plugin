@@ -32,9 +32,10 @@ module OmniAuth
       end
 
       def raw_info
+      	Rails.logger.debug 'DEBUG: YOOOOOOOOOOOOOOOOOOOOOOOOOOOO'
         puts access_token.token
         @raw_info ||= access_token.get(
-          "/oauth/token",
+          "/oauth/me",
           :params => { 'Authorization' =>
                        "Bearer #{access_token.token}"
                        }
