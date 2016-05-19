@@ -3,6 +3,8 @@ require 'omniauth-oauth2'
 module OmniAuth
   module Strategies
     class WordpressHosted < OmniAuth::Strategies::OAuth2
+
+    Rails.logger.debug 'DEBUG: HEY HEY HEY HEY HEY HEY'
       # Give your strategy a name.
       option :name, 'wordpress_hosted'
 
